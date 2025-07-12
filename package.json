@@ -10,7 +10,8 @@
     "setup": "node scripts/setup.js",
     "test-bot": "node test/test-bot.js",
     "test-news": "node test/test-news.js",
-    "test-investment": "node test/test-investment.js"
+    "test-investment": "node test/test-investment.js",
+    "test-carv": "node test/test-carv-config.js"
   },
   "keywords": ["telegram", "bot", "ai", "carv", "svm", "blockchain"],
   "author": "CARV Hackathon Team",

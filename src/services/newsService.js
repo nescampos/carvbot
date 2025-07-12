@@ -6,16 +6,16 @@ class NewsService {
   constructor() {
     this.baseURL = 'https://interface.carv.io';
     this.newsEndpoint = '/ai-agent-backend/news';
+    this.authToken = config.carv.authToken;
     this.cache = new Map();
     this.cacheTimeout = 5 * 60 * 1000; // 5 minutes cache
   }
 
   /**
    * Fetch latest cryptocurrency and blockchain news
-   * @param {string} authToken - Authorization token
    * @returns {Promise<Array>} Array of news articles
    */
-  async getLatestNews(authToken = null) {
+  async getLatestNews() {
     try {
       // Check cache first
       const cacheKey = 'latest_news';
@@ -31,9 +31,12 @@ class NewsService {
         'Content-Type': 'application/json'
       };
 
-      // Add authorization header if provided
-      if (authToken) {
-        headers['Authorization'] = authToken;
+      // Add authorization header if available
+      if (this.authToken) {
+        headers['Authorization'] = this.authToken;
+        logger.info('Using CARV auth token for API access');
+      } else {
+        logger.warn('No CARV auth token provided, attempting without authentication');
       }
 
       const response = await axios.get(`${this.baseURL}${this.newsEndpoint}`, {
@@ -70,12 +73,11 @@ class NewsService {
   /**
    * Search news by keywords
    * @param {string} query - Search query
-   * @param {string} authToken - Authorization token
    * @returns {Promise<Array>} Filtered news articles
    */
-  async searchNews(query, authToken = null) {
+  async searchNews(query) {
     try {
-      const allNews = await this.getLatestNews(authToken);
+      const allNews = await this.getLatestNews();
       
       if (!query || query.trim() === '') {
         return allNews;
@@ -103,12 +105,11 @@ class NewsService {
   /**
    * Get news by category (cryptocurrency, blockchain, markets, etc.)
    * @param {string} category - News category
-   * @param {string} authToken - Authorization token
    * @returns {Promise<Array>} Category-specific news
    */
-  async getNewsByCategory(category, authToken = null) {
+  async getNewsByCategory(category) {
     try {
-      const allNews = await this.getLatestNews(authToken);
+      const allNews = await this.getLatestNews();
       
       const categoryKeywords = {
         'bitcoin': ['bitcoin', 'btc', 'satoshi'],
@@ -144,12 +145,11 @@ class NewsService {
 
   /**
    * Get trending topics from news
-   * @param {string} authToken - Authorization token
    * @returns {Promise<Array>} Trending topics
    */
-  async getTrendingTopics(authToken = null) {
+  async getTrendingTopics() {
     try {
-      const allNews = await this.getLatestNews(authToken);
+      const allNews = await this.getLatestNews();
       
       // Extract common keywords from titles
       const keywords = {};

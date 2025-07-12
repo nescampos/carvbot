@@ -15,6 +15,10 @@ const config = {
     temperature: 0.7
   },
   
+  carv: {
+    authToken: process.env.CARV_AUTH_TOKEN
+  },
+  
   bot: {
     maxMessageLength: parseInt(process.env.MAX_MESSAGE_LENGTH) || 4096,
     rateLimitPerUser: parseInt(process.env.RATE_LIMIT_PER_USER) || 10,
@@ -33,6 +37,11 @@ const validateConfig = () => {
   
   if (missing.length > 0) {
     throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
+  }
+  
+  // Warn if CARV auth token is missing (optional but recommended)
+  if (!process.env.CARV_AUTH_TOKEN) {
+    console.warn('⚠️  CARV_AUTH_TOKEN not set. News functionality may be limited.');
   }
 };
 

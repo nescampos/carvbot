@@ -58,6 +58,13 @@ async function setupBot() {
 
     const aiChoice = await question('Choose AI provider (a/b/c): ');
     
+    // Get CARV API Configuration
+    console.log('\n3. CARV API Configuration');
+    console.log('   This is for accessing cryptocurrency news from CARV API');
+    console.log('   Leave empty if you don\'t have a CARV auth token\n');
+    
+    const carvToken = await question('Enter your CARV Auth Token: ');
+    
     let aiConfig = {};
     
     switch (aiChoice.toLowerCase()) {
@@ -121,9 +128,9 @@ async function setupBot() {
     }
 
     // Optional configuration
-    console.log('\n3. Optional Configuration:\n');
+    console.log('\n4. Optional Configuration:\n');
     
-    const botName = await question('Bot name (default: CarV AI Assistant): ') || 'CarV AI Assistant';
+    const botName = await question('Bot name (default: CarV AI Investment Assistant): ') || 'CarV AI Investment Assistant';
     const rateLimit = await question('Rate limit per user (default: 10): ') || '10';
     const maxMessageLength = await question('Max message length (default: 4096): ') || '4096';
 
@@ -136,9 +143,12 @@ OPENAI_API_KEY=${aiConfig.apiKey}
 OPENAI_API_BASE_URL=${aiConfig.baseURL}
 OPENAI_MODEL=${aiConfig.model}
 
+# CARV API Configuration
+CARV_AUTH_TOKEN=${carvToken.trim()}
+
 # Bot Configuration
 BOT_NAME=${botName.trim()}
-BOT_DESCRIPTION=AI-powered assistant for CARV SVM Chain ecosystem
+BOT_DESCRIPTION=AI-powered investment assistant for CARV SVM Chain ecosystem
 MAX_MESSAGE_LENGTH=${maxMessageLength.trim()}
 RATE_LIMIT_PER_USER=${rateLimit.trim()}
 RATE_LIMIT_WINDOW_MS=60000
