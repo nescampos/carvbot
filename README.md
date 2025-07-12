@@ -1,6 +1,6 @@
 # CarV AI Telegram Bot
 
-🤖 An intelligent AI-powered Telegram bot for the CARV SVM Chain ecosystem, providing investment analysis, news insights, and blockchain assistance.
+🤖 An intelligent AI-powered Telegram bot for the [CARV SVM Chain](https://carv.io/) ecosystem, providing investment analysis, news insights, and blockchain assistance.
 
 ## 🎯 Overview
 
@@ -87,7 +87,7 @@ The CarV AI Telegram Bot is a sophisticated chatbot that combines artificial int
 - Node.js 16+ installed
 - Telegram Bot Token (get from [@BotFather](https://t.me/botfather))
 - OpenAI API Key (or compatible AI service)
-- CARV API Token (optional but recommended for news features)
+- CARV API Token
 
 ### 2. Installation
 
@@ -124,7 +124,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 OPENAI_API_BASE_URL=https://api.openai.com/v1
 OPENAI_MODEL=gpt-3.5-turbo
 
-# CARV API Configuration (optional but recommended)
+# CARV API Configuration
 CARV_AUTH_TOKEN=your_carv_auth_token_here
 
 # Rate Limiting
@@ -174,7 +174,6 @@ The bot is compatible with any OpenAI-compatible API. You can configure:
 For accessing cryptocurrency news from CARV API:
 
 - **CARV_AUTH_TOKEN**: Authentication token for CARV API access
-- **Optional**: The bot will work without this token but with limited news functionality
 - **Recommended**: Get your token from CARV platform for full news access
 - **How to get**: Visit [CARV Documentation](https://docs.carv.io) for API access instructions
 
@@ -285,7 +284,6 @@ CMD ["npm", "start"]
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
 OPENAI_API_KEY=your_openai_api_key_here
 
-# Optional but recommended
 CARV_AUTH_TOKEN=your_carv_auth_token_here
 
 # Performance tuning
