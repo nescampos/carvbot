@@ -345,9 +345,6 @@ MIT License - see LICENSE file for details
 For support or questions:
 
 - **Documentation**: [CARV Documentation](https://docs.carv.io)
-- **Community**: [CARV Community](https://t.me/carvcommunity)
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
 
 ## 🙏 Acknowledgments
 
