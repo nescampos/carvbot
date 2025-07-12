@@ -8,7 +8,9 @@
     "dev": "nodemon src/index.js",
     "test": "jest",
     "setup": "node scripts/setup.js",
-    "test-bot": "node test/test-bot.js"
+    "test-bot": "node test/test-bot.js",
+    "test-news": "node test/test-news.js",
+    "test-investment": "node test/test-investment.js"
   },
   "keywords": ["telegram", "bot", "ai", "carv", "svm", "blockchain"],
   "author": "CARV Hackathon Team",

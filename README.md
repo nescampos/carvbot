@@ -18,6 +18,10 @@
 - `/clear` - Clear conversation history
 - `/stats` - Show your usage statistics
 - `/about` - Learn more about CARV SVM Chain
+- `/invest` - Get investment analysis and recommendations
+- `/analyze <asset>` - Analyze specific asset (e.g., `/analyze bitcoin`)
+- `/news` - Get latest cryptocurrency and blockchain news
+- `/trending` - Show trending topics in crypto space
 
 ## Quick Start
 
@@ -118,9 +122,10 @@ src/
 ### AI Integration
 
 - **Conversation Memory**: Maintains context across messages
-- **System Prompts**: Specialized prompts for CARV SVM Chain topics
-- **Error Handling**: Graceful handling of AI service errors
+- **Sentiment Analysis**: Analyzes news sentiment for investment insights
+- **Investment Recommendations**: Provides BUY/SELL/HOLD recommendations
 - **Multiple Providers**: Easy switching between AI services
+- **News Integration**: Real-time cryptocurrency and blockchain news from CARV API
 
 ### Telegram Bot Features
 

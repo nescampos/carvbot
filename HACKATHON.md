@@ -38,11 +38,12 @@ We've created an **AI-powered Telegram bot** that provides:
 
 ## 🚀 Key Features
 
-### **1. AI-Powered Conversations**
+### **1. AI-Powered Investment Analysis**
 - **Conversation Memory**: Maintains context across messages
-- **Specialized Prompts**: Optimized for CARV SVM Chain topics
-- **Error Handling**: Graceful fallbacks and retry mechanisms
+- **Sentiment Analysis**: Analyzes news sentiment for investment insights
+- **Investment Recommendations**: Provides BUY/SELL/HOLD recommendations
 - **Multi-Provider Support**: OpenAI, Anthropic, or custom endpoints
+- **News Integration**: Real-time cryptocurrency and blockchain news from CARV API
 
 ### **2. User Experience**
 - **Intuitive Commands**: `/start`, `/help`, `/clear`, `/stats`, `/about`
@@ -79,10 +80,11 @@ We've created an **AI-powered Telegram bot** that provides:
 
 ## 🎨 Use Cases
 
-### **1. Education & Onboarding**
-- **New User Guidance**: Helps users understand CARV SVM Chain
-- **Technical Tutorials**: Step-by-step blockchain development guidance
-- **Concept Explanations**: Complex blockchain concepts made simple
+### **1. Investment Analysis & Guidance**
+- **Market Sentiment Analysis**: Analyzes news sentiment for investment insights
+- **Investment Recommendations**: Provides BUY/SELL/HOLD recommendations
+- **Asset-Specific Analysis**: Detailed analysis for individual cryptocurrencies
+- **Risk Assessment**: Evaluates market conditions and potential risks
 
 ### **2. Developer Support**
 - **Smart Contract Help**: Assistance with Solana programming
@@ -98,6 +100,7 @@ We've created an **AI-powered Telegram bot** that provides:
 - **DeFi Integration**: Real-time price and portfolio tracking
 - **NFT Support**: NFT creation and management guidance
 - **Governance Participation**: DAO voting and proposal assistance
+- **Advanced Investment Features**: Portfolio optimization and risk management
 
 ## 🔧 Technical Implementation
 

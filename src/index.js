@@ -96,7 +96,11 @@ class CarVAIBot {
         { command: 'help', description: 'Show help message' },
         { command: 'clear', description: 'Clear conversation history' },
         { command: 'stats', description: 'Show usage statistics' },
-        { command: 'about', description: 'About CARV SVM Chain' }
+        { command: 'about', description: 'About CARV SVM Chain' },
+        { command: 'invest', description: 'Get investment analysis' },
+        { command: 'analyze', description: 'Analyze specific asset' },
+        { command: 'news', description: 'Get latest crypto news' },
+        { command: 'trending', description: 'Show trending topics' }
       ];
 
       await this.bot.setMyCommands(commands);
