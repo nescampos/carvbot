@@ -1,10 +1,10 @@
-# CarV AI Telegram Bot
+# CARV AI Telegram Bot
 
 🤖 An intelligent AI-powered Telegram bot for the [CARV SVM Chain](https://carv.io/) ecosystem, providing investment analysis, news insights, and blockchain assistance.
 
 ## 🎯 Overview
 
-The CarV AI Telegram Bot is a sophisticated chatbot that combines artificial intelligence with blockchain technology to provide real-world value. Built specifically for the CARV SVM Chain ecosystem, this bot offers intelligent investment analysis, real-time news insights, and comprehensive blockchain assistance.
+The CARV AI Telegram Bot is a sophisticated chatbot that combines artificial intelligence with blockchain technology to provide real-world value. Built specifically for the CARV SVM Chain ecosystem, this bot offers intelligent investment analysis, real-time news insights, and comprehensive blockchain assistance.
 
 ## 🚀 Key Features
 
